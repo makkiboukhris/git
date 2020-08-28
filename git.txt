@@ -1,0 +1,140 @@
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git init
+Initialized empty Git repository in C:/Users/makki/Desktop/learn_git_again/.git/
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git add third.txt
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "adding third.txt"
+[master (root-commit) b5c1330] adding third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit b5c1330370219a599498eeec8869686db8c6e8df (HEAD -> master)
+Author: makkiboukhris <makki01boukhris@gmail.com>
+Date:   Fri Aug 28 11:00:26 2020 +0100
+
+    adding third.txt
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git add fourth.txt
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "adding fourth.txt"
+[master e426303] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit e426303da5493caeaf1cdbccfb5cc58c04024fea (HEAD -> master)
+Author: makkiboukhris <makki01boukhris@gmail.com>
+Date:   Fri Aug 28 11:01:13 2020 +0100
+
+    adding fourth.txt
+
+commit b5c1330370219a599498eeec8869686db8c6e8df
+Author: makkiboukhris <makki01boukhris@gmail.com>
+Date:   Fri Aug 28 11:00:26 2020 +0100
+
+    adding third.txt
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git rm third.txt
+rm 'third.txt'
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "update"
+[master e032181] update
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit e032181e878c860b1882ffed240206df16c8185d (HEAD -> master)
+Author: makkiboukhris <makki01boukhris@gmail.com>
+Date:   Fri Aug 28 11:02:38 2020 +0100
+
+    update
+
+commit e426303da5493caeaf1cdbccfb5cc58c04024fea
+Author: makkiboukhris <makki01boukhris@gmail.com>
+Date:   Fri Aug 28 11:01:13 2020 +0100
+
+    adding fourth.txt
+
+commit b5c1330370219a599498eeec8869686db8c6e8df
+Author: makkiboukhris <makki01boukhris@gmail.com>
+Date:   Fri Aug 28 11:00:26 2020 +0100
+
+    adding third.txt
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ ls
+fourth.txt
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git commit -m "removing third.txt"
+On branch master
+nothing to commit, working tree clean
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git log
+commit e032181e878c860b1882ffed240206df16c8185d (HEAD -> master)
+Author: makkiboukhris <makki01boukhris@gmail.com>
+Date:   Fri Aug 28 11:02:38 2020 +0100
+
+    update
+
+commit e426303da5493caeaf1cdbccfb5cc58c04024fea
+Author: makkiboukhris <makki01boukhris@gmail.com>
+Date:   Fri Aug 28 11:01:13 2020 +0100
+
+    adding fourth.txt
+
+commit b5c1330370219a599498eeec8869686db8c6e8df
+Author: makkiboukhris <makki01boukhris@gmail.com>
+Date:   Fri Aug 28 11:00:26 2020 +0100
+
+    adding third.txt
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global core.pager=cat
+error: invalid key: core.pager=cat
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global core.pager cat
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global user.name "makkiboukhris"
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --global user.email "makki01boukhris@gmail.com"
+
+makki@MAKKI-BOUKHRIS MINGW64 ~/Desktop/learn_git_again (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+user.email=makki01boukhris@gmail.com
+user.name=makkiboukhris
+core.pager=cat
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
